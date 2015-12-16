@@ -1,0 +1,39 @@
+{
+  "name": "view-es",
+  "version": "1.0.0",
+  "description": "Data Viewer for Elastic Search",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shri3k/view-es.git"
+  },
+  "keywords": [
+    "elasticsearch",
+    "viewer",
+    "plugin",
+    "koa",
+    "cms"
+  ],
+  "author": "yojan shrestha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shri3k/view-es/issues"
+  },
+  "homepage": "https://github.com/shri3k/view-es#readme",
+  "dependencies": {
+    "co-views": "^2.1.0",
+    "elasticsearch": "^10.0.1",
+    "koa": "^1.1.2",
+    "koa-logger": "^1.3.0",
+    "koa-mount": "^1.3.0",
+    "nodemon": "^1.8.1",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "defaults": "^1.0.3",
+    "nodemon": "^1.8.1"
+  }
+}
