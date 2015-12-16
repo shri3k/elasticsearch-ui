@@ -5,7 +5,7 @@ elasticsearch cmds but in browser
 `docker build -t elastisearch .`  
 `docker run -p 9200:9200 elasticsearch`
 
-The MIT License (MIT)
+>The MIT License (MIT)
 
 >Copyright (c) 2015 shri3k
 
