@@ -4,28 +4,18 @@
  * Module dependencies
  */
 
-const es = require('elasticsearch');
-const req = require('request');
-const rx = require('rx');
+const koa = require('koa');
+const mount = require('koa-mount');
+const conf = require('./config/');
+const elastic = require('app/es');
 
+const path = require('path');
 
-function createClient(conf) {
-  var client = es.Client({
-    'host': conf.elastisearch,
-    'log': conf.debug && 'trace'
-  });
-  return {
-    'home': new Promise(function(resolve, reject) {
-      req(conf.elasticsearch, function(err, res, body) {
-        if (err) {
-          reject(err);
-        }
-        resolve(body);
-      });
-    })
-  };
-}
+var app = koa();
 
-module.exports = conf => {
-  return createClient(conf);
-}
+app.use(mount('/es', elastic(conf)));
+
+app.listen(conf.port, ()=>{
+	process.stdout.write(`Listening on ${conf.port}`);
+});
+
