@@ -7,7 +7,7 @@
 const koa = require('koa');
 const mount = require('koa-mount');
 const conf = require('./config/');
-const elastic = require('app/es');
+const elastic = require('app/es-ui');
 
 const path = require('path');
 
