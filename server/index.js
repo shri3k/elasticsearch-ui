@@ -3,13 +3,15 @@
 /**
  * Module dependencies
  */
-
 const koa = require('koa');
 const mount = require('koa-mount');
-const conf = require('./config/');
 const elastic = require('app/es-ui');
-
 const path = require('path');
+
+/**
+ * Local Deps
+ */
+const conf = require('./config/');
 
 var app = koa();
 
