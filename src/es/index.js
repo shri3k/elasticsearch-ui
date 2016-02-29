@@ -13,9 +13,7 @@ const path = require('path');
  * Third party libs
  */
 const koa = require('koa');
-const hbs = require('koa-hbs');
 const route = require('koa-route');
-const serve = require('koa-static');
 
 /**
  * Local libs
@@ -31,18 +29,6 @@ module.exports = conf => {
   elastic = elastic(conf);
   return app;
 };
-
-/**
- * Statics
- */
-app.use(serve(path.resolve(__dirname, './static')));
-
-/**
- * Koa view
- */
-app.use(hbs.middleware({
-  viewPath: path.resolve(__dirname, './views')
-}));
 
 app.use(function*(next) {
   var tmpRender = this.render;
@@ -60,8 +46,9 @@ app.use(function*(next) {
 });
 
 var index = function*() {
-  var result = yield elastic.home;
-  yield* this.render('index', {
+  var result =
+    yield elastic.home;
+  yield * this.render('index', {
     data: result
   });
 };
