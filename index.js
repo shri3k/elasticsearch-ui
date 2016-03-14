@@ -22,7 +22,7 @@ app.use(hbs.middleware({
   viewPath: path.resolve(__dirname, './views')
 }));
 
-app.use(mount('/es', elastic(conf)));
+app.use(mount('/', elastic(conf)));
 
 app.listen(conf.port, () => {
   process.stdout.write(`Listening on ${conf.port}`);
