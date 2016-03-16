@@ -17,11 +17,10 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "browserify-hmr": "^0.3.1",
-    "reactify": "^1.1.1",
-    "watchify": "^3.7.0"
+    "bulk-require": "^0.2.1",
+    "bulkify": "^1.1.1"
   },
   "dependencies": {
-    "brfs": "^1.4.3",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",

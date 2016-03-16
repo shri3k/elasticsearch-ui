@@ -5,7 +5,7 @@ const Route = require('react-router').Route;
 const Link = require('react-router').Link;
 const hashHistory = require('react-router').hashHistory;
 
-var components = require('./components/');
+var components = require('./components/').cmps;
 var Menu = React.createClass({
   render(){
     var _cmpAry = [];
